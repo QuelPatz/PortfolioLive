@@ -1,9 +1,9 @@
 var i = 0;
 
 function timedCount() {
-  i =  Math.floor(Math.random() * 100);
+  i =  i + 1;
   postMessage(i);
-  setTimeout("timedCount()",500);
+  setTimeout("timedCount()",1000);
 }
 
 timedCount();
