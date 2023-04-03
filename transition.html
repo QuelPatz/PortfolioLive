@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Transition/Animation</title>
+   <link type="text/css" rel="stylesheet" href="portfolio.css" /><!--css file-->
+   <meta name="viewport" content="width=device-width,initial-scale=1.0"><!--makes menu functional on cellphone-->
+</head>
+
+<body>
+   <!-- start of the header-->
+   <header>
+      <h1>My Portfolio</h1>
+      <nav>
+         <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="ifoundyou.html">I found you!</a></li>
+            <li><a href="showme.html">Show me...</a></li>
+            <li>Transition/Animation</li>
+            <li><a href="XMLHttpRequest.html">XMLHttpRequest</a></li>
+            <li><a href="webworkers.html">Web Workers</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="chat.html">Web Sockets</a></li>
+            <lli class="push"><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- Start of article -->
+   <h2>Transition/Animation</h2>
+      <p class="text">Click anywhere to move the ball</p>
+      <div id="foo" class="ball"></div>   
+      <a class="target">Hover over me to see me change</a>
+
+   <script>
+      const f = document.getElementById("foo");
+      document.addEventListener("click",(ev) => {
+            f.style.transform = `translateY(${ev.clientY - 25}px)`;
+            f.style.transform += `translateX(${ev.clientX - 25}px)`;
+         },false);
+   </script>
+
+   
+
+   <footer>
+      <p class="introduction">Please feel free to <a href="mailto:raquelpatzdorf@gmail.com"> send me an email </a> if
+         you would like to know more.</p>
+   </footer>
+</body>
+
+</html>

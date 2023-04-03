@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My experiences</title>
+    <link type="text/css" rel="stylesheet" href="portfolio.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"><!--makes menu functional on cellphone-->
+<style>
+    .container {
+        position:relative;
+        width: 40%;
+    }
+    .middle {
+        transition: .5s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: (-50%, -50%);
+    }
+    .container:hover .image {
+        opacity: 0.3;
+    }
+    .container:hover .middle {
+        opacity: 1;
+    }
+    .text {
+        background-color: #2f0e41;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+    }
+
+</style>
+</head>
+
+<body>
+    <!-- start of the header-->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li>About me</li>
+                <li><a href="ifoundyou.html">I found you!</a></li>
+                <li><a href="showme.html">Show me...</a></li>
+                <li><a href="transition.html">Transition</a></li>
+                <li><a href="XMLHttpRequest.html">XMLHttpRequest</a></li>
+                <li><a href="webworkers.html">Web Workers</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="chat.html">Web Sockets</a></li>
+                <li class="push"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Start of article -->
+    <h2>Experiences</h2>
+    <p>I'm a professional with a can-do attitude, teamwork, excellent organizational and analytical skills,
+        fluent in English and in Portuguese, I have been outstanding in fast-paced companies for my strong organization management skills,
+        team management skills, IT skills and knowledge.</p>
+
+    <h3>Most important experiences:</h3>
+
+    <li class="para">Store manager (+6 years)</li>
+    <li class="para">Dental Clinic Receptionist</li>
+    <li class="para">HR</li>
+    <li class="para">Customer Service Adviser</li>
+
+    <h3>Most important kills:</h3>
+
+    <li class="para">HTML5</li>
+    <li class="para">CSS3</li>
+    <li class="para">JS</li>
+    <li class="para">Management</li>
+    <li class="para">Problem solving</li>
+    <li class="para">Fast learner</li>
+    <li class="para">Decision making</li>
+    <li class="para">Reliable</li>
+    <li class="para">Customer loyalty</li>
+    <li class="para">Retail sales</li>
+    <li class="para">Payments</li>
+    <li class="para">Payroll processing</li>
+    <li class="para">Organization skills</li>
+
+    <div class="container">
+        <img src="sillyme.jpg" alt="Picture of myself" class="image" style="width:100%">
+        <div class="middle">
+          <div class="text">Raquel Patzdorf</div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+
+    <footer>
+        <p class="introduction">Please feel free to <a href="mailto:raquelpatzdorf@gmail.com"> send me an email </a> if
+            you would like to know more.</p>
+    </footer>
+
+</body>
+
+</html>

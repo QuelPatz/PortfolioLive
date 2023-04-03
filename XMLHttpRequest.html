@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="portfolio.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest</title>
+</head>
+
+<body>
+  <!-- start of the header-->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="ifoundyou.html">I found you!</a></li>
+        <li><a href="showme.html">Show me...</a></li>
+        <li><a href="transition.html">Transition/Animation</a></li>
+        <li>XMLHttpRequest</li>
+        <li><a href="webworkers.html">Web Workers</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+        <li><a href="chat.html">Web Sockets</a></li>
+        <li class="push"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Start of article -->
+  <h2>Best TV Shows ever!</h2>
+  <main class="page-body">
+    <div id="tvshow">
+      <button class="tvshow-button" onclick="loadXMLDoc()">Tv shows Info </button>
+    </div>
+
+    <table id="tvshow2" border="3">
+      <tr>
+        <th>TV Show</th>
+        <th>Release Year</th>
+        <th>Number of Seasons</th>
+      </tr>
+    </table>
+
+
+
+    <div id="ajax">
+      <h2>AJAX will change this text</h2>
+      <button type="button" onclick="loadXMLDoc2()">Click to change</button>
+    </div>
+  </main>
+
+  <script src="XMLHttpRequest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script>
+
+    function loadXMLDoc2() {
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function () {
+        document.getElementById("ajax").innerHTML = this.responseText;
+      }
+      xmlhttp.open("GET", "ajax.txt", true);
+      xmlhttp.send();
+    }
+
+  </script>
+
+
+  <footer>
+    <p class="introduction">Please feel free to <a href="mailto:raquelpatzdorf@gmail.com"> send me an email </a> if you
+      would like to know more.</p>
+  </footer>
+</body>
+
+</html>

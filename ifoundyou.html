@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>I found you!</title>
+    <link type="text/css" rel="stylesheet" href="portfolio.css" />
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+
+    <style>
+        #googleMap {
+            height: 300px;
+            width: 60%;
+            border: solid .5em;
+        }
+        #myCanvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- start of the header-->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li>I found you!</li>
+                <li><a href="showme.html">Show me...</a></li>
+                <li><a href="transition.html">Transition/Animation</a></li>
+                <li><a href="XMLHttpRequest.html">XMLHttpRequest</a></li>
+                <li><a href="webworkers.html">Web Workers</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="chat.html">Web Sockets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Start of article -->
+    <h2>Where are you?</h2>
+    <p class="introduction">With one click I can tell where you are.</p>
+
+
+    <p id="para">Click the button bellow to see your position.</p><!--changes to show lon/lat-->
+    <button class="loc" onclick="getLocation()">Press to see the map and location</button>
+    <div id="googleMap"></div>
+    <script src="http://maps.google.com/maps/api/js"></script>
+
+
+
+    <script>
+        var x = document.getElementById("para");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            //returns the coords to para assigned to x
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+
+            //Add marker to map
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            latlon = new google.maps.LatLng(lat, lon)
+
+            var myOptions = {
+                zoom: 14, //default zoom
+                center: latlon, //our positions will be at the center
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false,
+                navigationControlOptions: {
+                    style: google.maps.NavigationControlStyle.SMALL
+                }
+            }
+
+            //new map and marker
+            var map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
+            var marker = new google.maps.Marker({
+                position: latlon,
+                map: map,//add marker to map 
+                title: "You are here!"
+            });
+
+        }
+    </script>
+
+
+    <h2>Pin on map</h2>
+
+    <canvas id="myCanvas" width="900" height="500"></canvas>
+    <script>
+        // Get the canvas element and context
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Create an image object and load an image
+        var img = new Image();
+        img.src = "worldmap.jpg";
+
+        // When the image is loaded, draw it on the canvas
+        img.onload = function () {
+            ctx.drawImage(img, 0, 0);
+
+            // Add a click event listener to the canvas
+            canvas.addEventListener("click", function (event) {
+
+                // Get the coordinates of the click relative to the canvas
+                var rect = canvas.getBoundingClientRect();
+                var x = event.clientX - rect.left;
+                var y = event.clientY - rect.top;
+
+                // Check if the click is within a specific region of the image
+                if (x > 100 && x < 200 && y > 100 && y < 200) {
+                    // Do something if the click is within the region
+                    console.log("Clicked on region 1");
+                } else if (x > 300 && x < 400 && y > 100 && y < 200) {
+                    // Do something if the click is within another region
+                    console.log("Clicked on region 2");
+                }
+
+                // Draw a rectangle at the coordinates of the click
+                ctx.fillStyle = "purple";
+                ctx.fillRect(x, y, 7, 7);
+            });
+        };
+    </script>
+
+    <footer>
+        <p class="introduction">Please feel free to <a href="mailto:raquelpatzdorf@gmail.com"> send me an email </a> if
+            you would like to know more.</p>
+    </footer>
+
+</body>
+
+</html>

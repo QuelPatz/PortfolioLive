@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About Us</title>
+  <link type="text/css" rel="stylesheet" href="portfolio.css" />
+</head>
+
+<body>
+
+  <!-- start of the header-->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="ifoundyou.html">I found you!</a></li>
+        <li>Show me...</li>
+        <li><a href="transition.html">Transition/Animation</a></li>
+        <li><a href="XMLHttpRequest.html">XMLHttpRequest</a></li>
+        <li><a href="webworkers.html">Web Workers</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+        <li><a href="chat.html">Web Sockets</a></li>
+        <li class="push"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- start of article-->
+  <h2>Make your choice</h2>
+
+  <p>Here I'll ask you to choose background-color, font and an animal picture to show you how <em>Web storage</em>em>
+    works.</p>
+
+  <div class="wrapper">
+    <h3>Example of "Web storage"</h3>
+
+    <p>This example is designed to demonstrate usage of the <a href="http://dev.w3.org/html5/webstorage/"> Web Storage
+        API</a>. Choose custom background colors, logos and fonts from the below drop down menus, then try closing and
+      reopening the page — you will find that your choices are remembered, as they are stored using Web Storage.</p>
+
+    <form>
+      <div>
+        <label for="bgcolor">Choose background color:</label>
+        <input class="color" id="bgcolor" value="FF0000">
+      </div>
+      <div>
+        <label for="font">Choose font style:</label>
+        <select id="font">
+          <option value="'Open Sans Condensed', sans-serif" selected>Sans-serif</option>
+          <option value="'Bitter', serif">Serif</option>
+          <option value="'Ubuntu Mono'">Monospace</option>
+        </select>
+      </div>
+      <div>
+        <label for="image">Choose image:</label>
+        <select id="image">
+          <option value="images/butterfly.png" selected>Butterfly</option>
+          <option value="images/cat.png">Cat</option>
+          <option value="images/dog.png">Dog</option>
+          <option value="images/ladybug.png">Ladybug</option>
+        </select>
+      </div>
+    </form>
+
+    <img src="images/butterfly.png">
+  </div>
+
+
+  <script src="jscolor.js"></script>
+  <script src="main.js"></script>
+
+  <footer>
+    <p class="introduction">Please feel free to <a href="mailto:raquelpatzdorf@gmail.com"> send me an email </a> if you
+      would like to know more.</p>
+  </footer>
+</body>
+
+</html>

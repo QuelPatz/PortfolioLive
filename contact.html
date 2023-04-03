@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Contact</title>
+   <link type="text/css" rel="stylesheet" href="portfolio.css" />
+   <meta charset="utf-8"/>
+   <meta name="viewport"content="width=device-width,initial-scale=1.0">
+      <style>
+         /*bellow are the code for the contact-us box*/
+         form{
+            width: 30em;
+            }
+
+         .form-control{
+            margin-bottom: 1em;
+            }
+
+            .form-control input,
+         .form-control textarea{
+               padding: 0.5em;
+               }
+
+         div{
+            color: rgb(178, 117, 228);
+            }
+
+      
+         .page-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 2em;
+         }
+
+         label, input, textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+         }
+
+         .field-error {
+            color: red;
+            font-weight: bold;
+         }
+
+      </style>
+</head>
+
+<body>
+    <!-- start of the header-->
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+         <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="ifoundyou.html">I found you!</a></li>
+            <li><a href="showme.html">Show me...</a></li>
+            <li><a href="transition.html">Transition/Animation</a></li>
+            <li><a href="XMLHttpRequest.html">XMLHttpRequest</a></li>
+            <li><a href="webworkers.html">Web Workers</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="chat.html">Web Sockets</a></li>
+            <li class="push">Contact</li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- Start of article-->
+   <h2>Contact</h2>
+      <!--start of form-->
+		<div>
+			<form action="">
+				<!--name-->
+				<div class="form-control">
+					<label for="fullname">Your full name</label>
+					<input required id="fullname" type="text" name="fullname" />
+					<div class="field-error"></div>
+				</div>
+		
+				<!--email address-->
+				<div class="form-control">
+					<label for="email">Your email address</label>
+					<input required id="email" type="email" name="email_address" />
+					<div class="field-error"></div>	
+				</div>
+		
+				<!--your company-->
+				<div class="form-control">
+					<label for="company name">Your company name</Label>
+					<input id="name-company" type="name" name="company" />
+				</div>
+		
+				<!--text area-->
+				<div class="form-control">
+					<label for="message">Your message</Label>
+					<textarea id="message" name="message"></textarea>
+				</div>
+		
+				<!--send bottom-->
+				<input type="submit" value="Send" />
+		</div>
+			</form>
+      <!--end of form-->		
+
+   <footer>
+      <p class="introduction">Please feel free to <a href="mailto:raquelpatzdorf@gmail.com"> send me an email </a> if
+         you would like to know more about my services.</p>
+      <p>Message me on<a href="https://www.linkedin.com/in/raquel-patzdorf/">LinkedIn</a>.</p>
+   </footer>
+</body>
+
+</html>
