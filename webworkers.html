@@ -76,12 +76,40 @@
   </div>
   <script src="webworkers.js"></script>
 
-  <!-- Start of timer-->
-  <h2>Countdown timer</h2>
-  <p>Press the button and make your multiplications while the timer count <span class="js-timeout">2:00</span>.</p>
+  <!-- Start of numbers-->
+  <h2>Numbers Generator</h2>
+  <section class="number">
+    <p>Click the button below to see a number generated</p>
+    <button onclick="startWorker()">Start</button>
+    <button onclick="stopWorker()">Stop</button>
+    <p><output id="result"></output></p>
+  </section>
+  <script>
+    var w;
+    function startWorker() {
+      if (typeof Worker !== "undefined") {
+        if (typeof w == "undefined") {
+          w = new Worker("numbers.js");
+        }
+        w.onmessage = function (event) {
+          document.getElementById("result").innerHTML = event.data;
+        };
+      } else {
+        document.getElementById("result").innerHTML =
+          "Sorry! No Web Worker support.";
+      }
+      var codeBlock = document.getElementById("#result");
+      codeBlock.style.opacity = 0;
+      setTimeout(function () {
+        codeBlock.style.opacity = 1;
+      }, 1000);
+    }
 
-  <button id="js-startTimer">Start Countdown</button>
-  <button id="js-resetTimer">Stop &amp; Reset</button>
+    function stopWorker() {
+      w.terminate();
+      w = undefined;
+    }
+  </script>
   <script type="module" src="app.js"></script>
 
   <footer>
