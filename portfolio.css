@@ -285,15 +285,16 @@ table {
 
 /*bellow are the style for the number board*/
 .number {
-    background-color: rgb(100, 76, 184);
+    background-color: rgb(44, 34, 82);
+    text-align: center;
     width: 200px;
     margin-left: 10px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .number #result {
-    font-size: 80px;
+    font-size: 30px;
 }
 /*end of number board*/
