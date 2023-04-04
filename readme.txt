@@ -23,14 +23,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-
-**Task 3: Form using HTML5 and JS**
-===============================
-
-    On the "Contact" page you will find the form.
->>>>>>> 69c564de9e8d4cfaf17995eb6766e825d1af1774
 
 **Task 3: Form using HTML5 and JS**
 ===================================
