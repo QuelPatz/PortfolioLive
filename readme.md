@@ -19,7 +19,7 @@
     Most of the style of the page you will find on 'portfolio.css'.But some pages, as "About me",
     you will find some style inside the '.html' file.
     On the "About me" page you can see a picture that fades in and shows you my name inside a box.
-    src = https://www.w3schools.com
+    `<link>`: https://www.w3schools.com
 
 
 
