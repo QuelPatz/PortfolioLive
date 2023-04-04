@@ -1,29 +1,30 @@
-#Tasks
-1	Be able to create HTML5 pages and code with JavaScript
-2	Style with CSS and implement one of the CSS3 effects
-3	Be able to create forms using HTML5 with JavaScript validation
-4	Implement an *Image map & graphics on HTML5 canvas w/JS
-5	Responsive Design
-6	Implement HTML Geolocation API, detect the location of the user running a Web application
-7	Implement CSS Transitions & Animations – (use JS to detect transition)
-8	Implement an XMLHttpRequest for data & JQuery AJAX method (Remote Data Source)
-9	Web Sockets (Real Time Communication)
-10	Local storage (Offline Support) and Web worker
+### Tasks
+
+- Be able to create HTML5 pages and code with JavaScript;
+- Style with CSS and implement one of the CSS3 effects;
+- Be able to create forms using HTML5 with JavaScript validation;
+- Implement an *Image map & graphics on HTML5 canvas w/JS;
+- Responsive Design;
+- Implement HTML Geolocation API, detect the location of the user running a Web application;
+- Implement CSS Transitions & Animations – (use JS to detect transition);
+- Implement an XMLHttpRequest for data & JQuery AJAX method (Remote Data Source);
+- Web Sockets (Real Time Communication);
+- Local storage (Offline Support) and Web worker;
 
 
-============================
-Task 2: CSS and CSS3 effects
-============================
+
+**Task 2: CSS and CSS3 effects**
+================================
 
     Most of the style of the page you will find on 'portfolio.css'.But some pages, as "About me",
-you will find some style inside the '.html' file.
+    you will find some style inside the '.html' file.
     On the "About me" page you can see a picture that fades in and shows you my name inside a box.
     src = https://www.w3schools.com
 
 
 
-===============================
-Task 3: Form using HTML5 and JS
+
+**Task 3: Form using HTML5 and JS**
 ===============================
 
     On the "Contact" page you will find the form.
