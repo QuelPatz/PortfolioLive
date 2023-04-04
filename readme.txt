@@ -17,12 +17,20 @@
 ================================
 
     Most of the style of the page you will find on 'portfolio.css'.But some pages, as "About me",
-you will find some style inside the '.html' file.
+    you will find some style inside the '.html' file.
     On the "About me" page you can see a picture that fades in and shows you my name inside a box.
     src = https://www.w3schools.com
 
 
 
+<<<<<<< HEAD
+=======
+
+**Task 3: Form using HTML5 and JS**
+===============================
+
+    On the "Contact" page you will find the form.
+>>>>>>> 69c564de9e8d4cfaf17995eb6766e825d1af1774
 
 **Task 3: Form using HTML5 and JS**
 ===================================
